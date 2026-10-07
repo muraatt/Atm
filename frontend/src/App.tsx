@@ -158,7 +158,7 @@ export default function App(){
       setScenario(restored);setManual(restored.launch.elevation_resolved&&restored.launch.elevation_source.startsWith('Manual'));setConnection(hasEngine());const id=localStorage.getItem('atmosphere-job');if(id&&hasEngine())api<Job>(`/api/analyses/${id}`).then(setJob).catch(()=>{});}).catch(e=>setError(`The local calculation service is unavailable. ${e.message}`));},[]);
 
   useEffect(()=>{if(scenario)localStorage.setItem('atmosphere-scenario',JSON.stringify(scenario));},[scenario]);
-  useEffect(()=>{if(scenario&&!connection)void loadReview().then(saved=>{if(saved)setResult(saved);}).catch(()=>{});},[connection,!!scenario]);
+  useEffect(()=>{if(scenario)void loadReview().then(saved=>{if(saved)setResult(current=>current??saved);}).catch(()=>{});},[!!scenario]);
   useEffect(()=>{if(result)void saveReview(result).catch(()=>setError('This browser could not retain the result. Download Analysis JSON to keep a copy.'));},[result]);
 
   useEffect(()=>{if(!job?.id)return;localStorage.setItem('atmosphere-job',job.id);if(job.state==='completed'){api<Result>(`/api/analyses/${job.id}/result`).then(setResult).catch(e=>setError(e.message));return;}if(!running)return;let cancelled=false;const timer=setInterval(()=>api<Job>(`/api/analyses/${job.id}`).then(j=>{if(!cancelled)setJob(j);}).catch(e=>{if(!cancelled)setError(e.message);}),1200);return()=>{cancelled=true;clearInterval(timer);};},[job?.id,job?.state]);
