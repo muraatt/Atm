@@ -1,0 +1,15 @@
+# Tested direct dependencies; Python 3.13 on Windows
+numpy==2.4.6
+scipy==1.18.0
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5
+astropy==8.0.1
+pymsis==0.13.0
+rasterio==1.5.2
+httpx==0.28.1
+python-multipart==0.0.32
+shapely==2.1.2
+netCDF4==1.7.4
+pytest==9.1.1
+casadi==3.7.2

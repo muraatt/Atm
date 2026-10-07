@@ -1,0 +1,310 @@
+[
+  {
+    "id": "ll2-87",
+    "name": "Kennedy Space Center",
+    "country": "United States",
+    "pad": "LC-39A",
+    "latitude_deg": 28.60822681,
+    "longitude_deg": -80.60428186,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/87/",
+    "azimuth_sectors_deg": [
+      [
+        35,
+        120
+      ]
+    ],
+    "range_reference": "NASA Ames launch-azimuth reference (2013)",
+    "range_source_url": "https://aviationsystems.arc.nasa.gov/publications/2013/AIAA-2013-4248.pdf"
+  },
+  {
+    "id": "ll2-80",
+    "name": "Cape Canaveral",
+    "country": "United States",
+    "pad": "SLC-40",
+    "latitude_deg": 28.56194122,
+    "longitude_deg": -80.57735736,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/80/",
+    "azimuth_sectors_deg": [
+      [
+        35,
+        120
+      ]
+    ],
+    "range_reference": "NASA Ames launch-azimuth reference (2013)",
+    "range_source_url": "https://aviationsystems.arc.nasa.gov/publications/2013/AIAA-2013-4248.pdf"
+  },
+  {
+    "id": "ll2-16",
+    "name": "Vandenberg",
+    "country": "United States",
+    "pad": "SLC-4E",
+    "latitude_deg": 34.632,
+    "longitude_deg": -120.611,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/16/",
+    "azimuth_sectors_deg": [
+      [
+        172,
+        200
+      ]
+    ],
+    "range_reference": "Historical Western Range corridor reference (1972)",
+    "range_source_url": "https://ntrs.nasa.gov/api/citations/19720008089/downloads/19720008089.pdf"
+  },
+  {
+    "id": "ll2-79",
+    "name": "Wallops Island",
+    "country": "United States",
+    "pad": "Rocket Lab LC-2",
+    "latitude_deg": 37.833262,
+    "longitude_deg": -75.488235,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/79/",
+    "azimuth_sectors_deg": [
+      [
+        90,
+        160
+      ]
+    ],
+    "range_reference": "NASA Wallops Range Users Handbook (2013)",
+    "range_source_url": "https://www.nasa.gov/wp-content/uploads/2023/09/wallopsrangehandbook-lowres.pdf"
+  },
+  {
+    "id": "ll2-199",
+    "name": "Pacific Spaceport Complex",
+    "country": "United States",
+    "pad": "Pad 3C",
+    "latitude_deg": 57.431239,
+    "longitude_deg": -152.350749,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/199/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-188",
+    "name": "Starbase",
+    "country": "United States",
+    "pad": "Orbital Launch Pad 1",
+    "latitude_deg": 25.9962,
+    "longitude_deg": -97.154423,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/188/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-67",
+    "name": "Guiana Space Centre / Kourou",
+    "country": "French Guiana",
+    "pad": "Ariane Launch Area 4",
+    "latitude_deg": 5.256319,
+    "longitude_deg": -52.786838,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/67/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-20",
+    "name": "Baikonur Cosmodrome",
+    "country": "Kazakhstan",
+    "pad": "Site 31/6",
+    "latitude_deg": 45.996034,
+    "longitude_deg": 63.564003,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/20/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-36",
+    "name": "Plesetsk Cosmodrome",
+    "country": "Russia",
+    "pad": "Site 43/3",
+    "latitude_deg": 62.9273,
+    "longitude_deg": 40.45,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/36/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-83",
+    "name": "Vostochny Cosmodrome",
+    "country": "Russia",
+    "pad": "Site 1S",
+    "latitude_deg": 51.884395,
+    "longitude_deg": 128.333932,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/83/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-175",
+    "name": "Wenchang",
+    "country": "China",
+    "pad": "Pad 101",
+    "latitude_deg": 19.614334,
+    "longitude_deg": 110.951011,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/175/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-37",
+    "name": "Jiuquan",
+    "country": "China",
+    "pad": "Launch Area 91",
+    "latitude_deg": 40.957893,
+    "longitude_deg": 100.290944,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/37/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-33",
+    "name": "Taiyuan",
+    "country": "China",
+    "pad": "Launch Complex 7",
+    "latitude_deg": 38.8489311,
+    "longitude_deg": 111.6079339,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/33/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-45",
+    "name": "Xichang",
+    "country": "China",
+    "pad": "Launch Complex 2",
+    "latitude_deg": 28.245504,
+    "longitude_deg": 102.026768,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/45/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-82",
+    "name": "Satish Dhawan / Sriharikota",
+    "country": "India",
+    "pad": "Second Launch Pad",
+    "latitude_deg": 13.7199,
+    "longitude_deg": 80.2304,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/82/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-41",
+    "name": "Tanegashima",
+    "country": "Japan",
+    "pad": "Yoshinobu LP-1",
+    "latitude_deg": 30.400813,
+    "longitude_deg": 130.977748,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/41/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-43",
+    "name": "Uchinoura",
+    "country": "Japan",
+    "pad": "KS Center",
+    "latitude_deg": 31.2519752,
+    "longitude_deg": 131.0791609,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/43/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-65",
+    "name": "Mahia Peninsula",
+    "country": "New Zealand",
+    "pad": "Rocket Lab LC-1A",
+    "latitude_deg": -39.262833,
+    "longitude_deg": 177.864469,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/65/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-64",
+    "name": "Naro Space Center",
+    "country": "South Korea",
+    "pad": "LC-1",
+    "latitude_deg": 34.431867,
+    "longitude_deg": 127.535069,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/64/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-51",
+    "name": "Andoya Spaceport",
+    "country": "Norway",
+    "pad": "Orbital Launch Pad",
+    "latitude_deg": 69.1084,
+    "longitude_deg": 15.5895,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/51/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-146",
+    "name": "Alcantara Space Center",
+    "country": "Brazil",
+    "pad": "VLS Pad",
+    "latitude_deg": -2.3177,
+    "longitude_deg": -44.369984,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/146/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-88",
+    "name": "Imam Khomeini Spaceport",
+    "country": "Iran",
+    "pad": "Imam Khomeini Pad",
+    "latitude_deg": 35.237005,
+    "longitude_deg": 53.9505,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/88/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-75",
+    "name": "Palmachim",
+    "country": "Israel",
+    "pad": "Shavit Launch Pad",
+    "latitude_deg": 31.884444,
+    "longitude_deg": 34.680278,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/75/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  },
+  {
+    "id": "ll2-238",
+    "name": "Bowen Orbital Spaceport",
+    "country": "Australia",
+    "pad": "Eris Pad",
+    "latitude_deg": -19.958151,
+    "longitude_deg": 148.1129553,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/pads/238/",
+    "azimuth_sectors_deg": [],
+    "range_reference": "No numeric azimuth envelope in the bundled catalog",
+    "range_source_url": null
+  }
+]

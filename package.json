@@ -1,0 +1,10 @@
+{
+  "name": "atmosphere-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {"node": "22.x"},
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend test"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "scenario": {
+    "schema_version": 1,
+    "name": "Two-stage LEO study",
+    "launch": {
+      "launch_site_id": "ll2-87",
+      "azimuth_sectors_deg": [
+        [
+          35.0,
+          120.0
+        ]
+      ],
+      "range_source": "NASA Ames launch-azimuth reference (2013)",
+      "latitude_deg": 28.60822681,
+      "longitude_deg": -80.60428186,
+      "elevation_m": 0.0,
+      "geoid_height_m": 0.0,
+      "elevation_source": "Manual sea-level launch",
+      "elevation_resolution_arcsec": null,
+      "surface": "land",
+      "elevation_resolved": false,
+      "epoch": "2026-10-04T17:52:44.062381Z"
+    },
+    "environment": {
+      "model": "standard",
+      "solar_mode": "automatic",
+      "f107": 150.0,
+      "f107_average": 150.0,
+      "ap": 4.0
+    },
+    "vehicle": {
+      "payload_mass_kg": 3000.0,
+      "expected_initial_mass_kg": null,
+      "stages": [
+        {
+          "name": "Booster",
+          "engine_type": "liquid",
+          "dry_mass_kg": 14000.0,
+          "propellant_mass_kg": 220000.0,
+          "vacuum_thrust_n": 4200000.0,
+          "isp_sea_level_s": 285.0,
+          "isp_vacuum_s": 320.0,
+          "reference_area_m2": 12.0,
+          "cd": 0.3,
+          "cd_table": [],
+          "throttle_min": 0.4,
+          "throttle_max": 1.0,
+          "ignition_limit": 1,
+          "separation_delay_s": 2.0,
+          "max_thrust_velocity_angle_deg": 15.0,
+          "solid_burn_curve": []
+        },
+        {
+          "name": "Upper stage",
+          "engine_type": "liquid",
+          "dry_mass_kg": 3500.0,
+          "propellant_mass_kg": 65000.0,
+          "vacuum_thrust_n": 800000.0,
+          "isp_sea_level_s": 310.0,
+          "isp_vacuum_s": 360.0,
+          "reference_area_m2": 7.0,
+          "cd": 0.3,
+          "cd_table": [],
+          "throttle_min": 0.4,
+          "throttle_max": 1.0,
+          "ignition_limit": 2,
+          "separation_delay_s": 2.0,
+          "max_thrust_velocity_angle_deg": 15.0,
+          "solid_burn_curve": []
+        }
+      ]
+    },
+    "constraints": {
+      "vertical_ascent_s": 25.0,
+      "max_dynamic_pressure_pa": null,
+      "max_load_factor_g": null,
+      "max_mission_duration_s": 172800.0,
+      "solver_budget_s": 90.0,
+      "max_iterations": 15
+    },
+    "target": {
+      "perigee_altitude_m": 200000.0,
+      "apogee_altitude_m": null,
+      "inclination_deg": null,
+      "raan_deg": null,
+      "argument_of_periapsis_deg": null,
+      "arrival_phase_deg": null,
+      "altitude_tolerance_m": 1000.0,
+      "angle_tolerance_deg": 0.1
+    },
+    "objective": "propellant"
+  },
+  "flight_plan": {
+    "launch_azimuth_deg": 91.94749760819018,
+    "burns": [
+      {
+        "stage_index": 0,
+        "duration_s": 163.55624266666666,
+        "coast_before_s": 0,
+        "angle_fractions": [
+          0.2296661131071677,
+          0.09186644524286708,
+          0.02296661131071677
+        ],
+        "clock_angles_rad": [
+          0,
+          0,
+          0
+        ],
+        "throttles": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "stage_index": 1,
+        "duration_s": 247.40487576971088,
+        "coast_before_s": 0,
+        "angle_fractions": [
+          0.7401252676702629,
+          0.29605010706810514,
+          0.0
+        ],
+        "clock_angles_rad": [
+          0,
+          0,
+          0
+        ],
+        "throttles": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  }
+}

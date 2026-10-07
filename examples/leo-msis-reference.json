@@ -1,0 +1,217 @@
+{
+  "scenario": {
+    "schema_version": 1,
+    "name": "Two-stage LEO study",
+    "launch": {
+      "latitude_deg": 28.5,
+      "longitude_deg": -80.6,
+      "elevation_m": 0.0,
+      "geoid_height_m": 0.0,
+      "elevation_source": "Manual sea-level launch",
+      "elevation_resolution_arcsec": null,
+      "surface": "auto",
+      "elevation_resolved": false,
+      "epoch": "2026-10-04T16:40:06.897577Z"
+    },
+    "environment": {
+      "model": "msis",
+      "solar_mode": "nominal",
+      "f107": 150.0,
+      "f107_average": 150.0,
+      "ap": 4.0
+    },
+    "vehicle": {
+      "payload_mass_kg": 3000.0,
+      "expected_initial_mass_kg": null,
+      "stages": [
+        {
+          "name": "Booster",
+          "engine_type": "liquid",
+          "dry_mass_kg": 14000.0,
+          "propellant_mass_kg": 220000.0,
+          "vacuum_thrust_n": 4200000.0,
+          "isp_sea_level_s": 285.0,
+          "isp_vacuum_s": 320.0,
+          "reference_area_m2": 12.0,
+          "cd": 0.3,
+          "cd_table": [],
+          "throttle_min": 0.4,
+          "throttle_max": 1.0,
+          "ignition_limit": 1,
+          "separation_delay_s": 2.0,
+          "max_thrust_velocity_angle_deg": 15.0,
+          "solid_burn_curve": []
+        },
+        {
+          "name": "Upper stage",
+          "engine_type": "liquid",
+          "dry_mass_kg": 3500.0,
+          "propellant_mass_kg": 65000.0,
+          "vacuum_thrust_n": 800000.0,
+          "isp_sea_level_s": 310.0,
+          "isp_vacuum_s": 360.0,
+          "reference_area_m2": 7.0,
+          "cd": 0.3,
+          "cd_table": [],
+          "throttle_min": 0.4,
+          "throttle_max": 1.0,
+          "ignition_limit": 2,
+          "separation_delay_s": 2.0,
+          "max_thrust_velocity_angle_deg": 15.0,
+          "solid_burn_curve": []
+        }
+      ]
+    },
+    "constraints": {
+      "vertical_ascent_s": 25.0,
+      "max_dynamic_pressure_pa": null,
+      "max_load_factor_g": null,
+      "max_mission_duration_s": 172800.0,
+      "solver_budget_s": 180.0,
+      "max_iterations": 20
+    },
+    "target": {
+      "perigee_altitude_m": 200000.0,
+      "apogee_altitude_m": 200000.0,
+      "inclination_deg": 28.5,
+      "raan_deg": null,
+      "argument_of_periapsis_deg": null,
+      "arrival_phase_deg": null,
+      "altitude_tolerance_m": 1000.0,
+      "angle_tolerance_deg": 0.1
+    },
+    "objective": "propellant"
+  },
+  "flight_plan": {
+    "launch_azimuth_deg": 88.00836566482639,
+    "burns": [
+      {
+        "stage_index": 0,
+        "duration_s": 163.55624266666666,
+        "coast_before_s": 0,
+        "angle_fractions": [
+          0.22777075633141705,
+          0.09110830253256683,
+          0.022777075633141707
+        ],
+        "clock_angles_rad": [
+          0,
+          0,
+          0
+        ],
+        "throttles": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "stage_index": 1,
+        "duration_s": 243.76938323460982,
+        "coast_before_s": 0,
+        "angle_fractions": [
+          0.8999999999280309,
+          0.3599999999712124,
+          0.0
+        ],
+        "clock_angles_rad": [
+          0,
+          0,
+          0
+        ],
+        "throttles": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "status": "Target Achieved",
+  "target_comparison": [
+    {
+      "parameter": "perigee_altitude_m",
+      "target": 200000,
+      "actual": 199746.68505972624,
+      "error": -253.31494027376175,
+      "tolerance": 1000,
+      "within_tolerance": true
+    },
+    {
+      "parameter": "apogee_altitude_m",
+      "target": 200000,
+      "actual": 199965.7838670453,
+      "error": -34.21613295469433,
+      "tolerance": 1000,
+      "within_tolerance": true
+    },
+    {
+      "parameter": "inclination_deg",
+      "target": 28.5,
+      "actual": 28.5012350852953,
+      "error": 0.0012350852952991431,
+      "tolerance": 0.1,
+      "within_tolerance": true
+    }
+  ],
+  "summary": {
+    "arrival_time_s": 409.32562590127645,
+    "final_mass_kg": 16260.979486231177,
+    "final_altitude_m": 204609.5288309967,
+    "final_inertial_speed_m_s": 7784.406662918939,
+    "propellant_burned_kg": 274139.0205137686,
+    "propellant_remaining_kg": 9760.979486231177,
+    "propellant_discarded_kg": 1100.0000000002326,
+    "max_dynamic_pressure_pa": 31019.587155625864,
+    "max_load_factor_g": 5.016751650011769,
+    "max_thrust_velocity_angle_deg": 13.499999998920462
+  },
+  "metadata": {
+    "application_version": "0.1.0",
+    "units": "SI",
+    "frame": "GCRS (inertial), ITRS (Earth-fixed)",
+    "orbit_altitude_reference_m": 6378137.0,
+    "gravity": "WGS84 central + J2",
+    "integrator": "DOP853",
+    "atmosphere": {
+      "model": "NRLMSIS 2.1",
+      "wrapper_version": "0.13.0",
+      "solar_mode": "nominal",
+      "f107": 150.0,
+      "f107_average": 150.0,
+      "ap": 4.0,
+      "wind": "Zero wind",
+      "valid_height_m": [
+        0,
+        1000000
+      ],
+      "source": "https://ccmc.gsfc.nasa.gov/models/NRLMSIS~2.1/",
+      "note": "Climatological atmosphere, not a weather forecast. Vacuum above 1,000 km.",
+      "interpolation": "Latitude/longitude/time grid: 1 degree / 1 degree / 1 hour; log-density vertical PCHIP",
+      "solar_indices_by_day": {
+        "2026-10-04": {
+          "f107": 150.0,
+          "f107_average": 150.0,
+          "ap": 4.0
+        }
+      }
+    },
+    "launch_elevation_source": "Manual sea-level launch",
+    "launch_elevation_resolution_arcsec": null,
+    "verified_with_strict_integration": true
+  },
+  "optimizer": {
+    "method": "Scaled multiple shooting + constrained SLSQP",
+    "iterations": 5,
+    "elapsed_s": 178.75924059993122,
+    "messages": [
+      "Optimization budget reached; best available trajectory will be independently verified.",
+      "Optimization budget reached; best available trajectory will be independently verified.",
+      "Optimization budget reached; best available trajectory will be independently verified."
+    ],
+    "selected_template": null,
+    "objective": "propellant",
+    "note": "A nonconverged local search is not proof that the target is physically impossible."
+  },
+  "description": "Synthetic two-stage 200 km LEO reference. Controls are saved for independent strict replay; the search was budget-limited and does not certify a globally optimal solution."
+}
