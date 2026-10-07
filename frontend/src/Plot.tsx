@@ -7,11 +7,11 @@ import {globeEpoch,globeGeometry,type EarthRotation,type Point3} from './earthGl
 let plotlyPromise:Promise<typeof import('plotly.js-dist-min')>|undefined;
 export function Plot({data,layout,className=''}:{data:Data[];layout:Partial<Layout>;className?:string}){
   const ref=useRef<HTMLDivElement>(null);const [error,setError]=useState('');
-  useEffect(()=>{let mounted=true;const element=ref.current;let instance:typeof import('plotly.js-dist-min')['default']|undefined;
+  useEffect(()=>{let mounted=true,ready=false;const element=ref.current;let instance:typeof import('plotly.js-dist-min')['default']|undefined;
     plotlyPromise??=import('plotly.js-dist-min');
-    plotlyPromise.then(async({default:p})=>{if(!mounted||!element)return;instance=p;await p.react(element,data,{paper_bgcolor:'transparent',plot_bgcolor:'transparent',font:{family:'Inter, Segoe UI, sans-serif',color:'#a9b5c7',size:11},margin:{l:55,r:20,b:45,t:24},...layout},{responsive:true,displaylogo:false,modeBarButtonsToRemove:['sendDataToCloud']});}).catch(e=>mounted&&setError(e.message));
-const observer=new ResizeObserver(()=>{if(instance&&element)instance.Plots.resize(element as unknown as PlotlyHTMLElement);});if(element)observer.observe(element);
-    return()=>{mounted=false;observer.disconnect();if(instance&&element)instance.purge(element);};
+    plotlyPromise.then(async({default:p})=>{if(!mounted||!element)return;instance=p;await p.react(element,data,{paper_bgcolor:'transparent',plot_bgcolor:'transparent',font:{family:'Inter, Segoe UI, sans-serif',color:'#a9b5c7',size:11},margin:{l:55,r:20,b:45,t:24},...layout},{responsive:true,displaylogo:false,modeBarButtonsToRemove:['sendDataToCloud']});ready=mounted;}).catch(e=>mounted&&setError(e.message));
+const observer=new ResizeObserver(()=>{if(ready&&instance&&element?.isConnected&&element.clientWidth>0&&element.clientHeight>0)void Promise.resolve(instance.Plots.resize(element as unknown as PlotlyHTMLElement)).catch(()=>{/* The view may close before Plotly's deferred resize. */});});if(element)observer.observe(element);
+    return()=>{mounted=false;ready=false;observer.disconnect();if(instance&&element)instance.purge(element);};
   },[data,layout]);
   return <div className={`plot ${className}`} ref={ref}>{error&&<p className="error">Chart unavailable: {error}</p>}</div>;
 }
