@@ -17,9 +17,9 @@ export function ConsistencyPanel({scenario,resultId,savedReport,onBudgetChange}:
       .finally(()=>{if(!controller.signal.aborted)setBusy(false);}),350);
     return()=>{clearTimeout(timer);controller.abort();};
   },[JSON.stringify(scenario),resultId,savedReport]);
-  return <section className="card consistency-card"><div className="card-heading"><div><span className="eyebrow">{resultId?'Saved flight snapshot':'Before optimization'}</span><h3>{resultId?'Flight diagnosis':'Consistency check'}</h3></div>{!busy&&!error&&report&&<span className={`badge ${report.status==='Review required'?'warning':'success'}`}>{report.status}</span>}</div>
+  return <section className="card consistency-card"><div className="card-heading"><div><span className="eyebrow">{resultId||savedReport?'Saved flight snapshot':'Before optimization'}</span><h3>{resultId||savedReport?'Flight diagnosis':'Consistency check'}</h3></div>{!busy&&!error&&report&&<span className={`badge ${report.status==='Review required'?'warning':'success'}`}>{report.status}</span>}</div>
     {busy&&report&&<p className="field-hint" role="status">Updating planning estimates…</p>}
-    {busy&&!report?<p className="muted">Checking vehicle capacity and mission consistency…</p>:error?<p className="error">Consistency check unavailable: {error}</p>:report&&<>
+    {busy&&!report?<p className="muted">Checking vehicle capacity and mission consistency…</p>:error?<p className={hasEngine()?'error':'muted'}>{error}</p>:report&&<>
       <p className="field-hint">An optimistic performance screen. Passing these checks does not establish that the target is reachable. Warnings do not prevent a diagnostic flight analysis.</p>
       <div className="consistency-stats">{[
         ['Ideal vehicle delta-v',fmt(report.ideal_delta_v_m_s/1000,2),'km/s'],
