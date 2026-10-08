@@ -57,3 +57,5 @@ main{padding:0 32px 24px;max-width:1600px}.mission-strip{display:grid;grid-templ
 @media(max-width:900px){.section-steering .two-column,.section-limits .two-column{grid-template-columns:1fr}}
 
 @media(max-width:650px){.step-item>span:nth-child(2){display:block}.step-item .step-index{display:none}.step-item{justify-content:flex-start}}
+
+.launch-layout>.stack{display:flex;flex-direction:column}.card.launch-map-card{padding:0}.map-readout{padding:16px 18px}.known-site-marker{border:1px solid #5c7650;background:#365334}.known-site-marker.selected{background:#e4ee98;border-color:#385130;box-shadow:0 0 0 3px #f4f6df}.known-site-label{background:#f6f8f1;color:#354f2b;border-color:#c1d0b2}
