@@ -10,7 +10,7 @@ export function LaunchMap({launch,onPick,series,showSites=false,selectedSiteId,o
   const siteMarkers=useRef<Map<string,HTMLButtonElement>>(new Map()),selectRef=useRef(onSelectSite),previousLocation=useRef([launch.latitude_deg,launch.longitude_deg]);selectRef.current=onSelectSite;
   const worldView=()=>mapRef.current?.fitBounds([[-175,-50],[179,73]],{padding:32,maxZoom:1.4,duration:600});
   useEffect(()=>{if(!ref.current)return;let map:maplibregl.Map;
-    try{map=new maplibregl.Map({container:ref.current,center:showSites?[10,15]:[launch.longitude_deg,launch.latitude_deg],zoom:showSites?0.8:series?1.2:3.3,renderWorldCopies:!showSites,style:'https://tiles.openfreemap.org/styles/dark'});
+    try{map=new maplibregl.Map({container:ref.current,center:showSites?[10,15]:[launch.longitude_deg,launch.latitude_deg],zoom:showSites?0.8:series?1.2:3.3,renderWorldCopies:!showSites,style:'https://tiles.openfreemap.org/styles/liberty'});
       mapRef.current=map;map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
       const el=document.createElement('div');el.className='launch-marker';el.style.pointerEvents='none';markerRef.current=new maplibregl.Marker({element:el}).setLngLat([launch.longitude_deg,launch.latitude_deg]).addTo(map);
       if(showSites)for(const site of launchSites){
@@ -23,7 +23,7 @@ export function LaunchMap({launch,onPick,series,showSites=false,selectedSiteId,o
       }
       map.on('click',e=>pickRef.current?.(e.lngLat.lat,((e.lngLat.lng+180)%360+360)%360-180));
       map.on('error',()=>setError('Map tiles could not load. Use the launch-site list or manual coordinates.'));
-      map.on('load',()=>{if(showSites)worldView();map.addSource('track',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'MultiLineString',coordinates:[]}}});map.addLayer({id:'track',type:'line',source:'track',paint:{'line-color':'#59e5c1','line-width':3}});if(series)(map.getSource('track') as maplibregl.GeoJSONSource).setData({type:'Feature',properties:{},geometry:{type:'MultiLineString',coordinates:groundTrackParts(series)}});});
+      map.on('load',()=>{if(showSites)worldView();map.addSource('track',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'MultiLineString',coordinates:[]}}});map.addLayer({id:'track',type:'line',source:'track',paint:{'line-color':'#406c45','line-width':3}});if(series)(map.getSource('track') as maplibregl.GeoJSONSource).setData({type:'Feature',properties:{},geometry:{type:'MultiLineString',coordinates:groundTrackParts(series)}});});
     }catch{setError('Interactive map requires WebGL. Use the launch-site list or manual coordinates.');}
     return()=>{mapRef.current=null;siteMarkers.current.clear();map?.remove();};
   },[]);
